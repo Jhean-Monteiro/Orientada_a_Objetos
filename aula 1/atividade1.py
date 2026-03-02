@@ -40,7 +40,7 @@ class Pessoa:
 
         
 
-Jhean = Pessoa("Jhean", 20, 1.70, 35)
+Jhean = Pessoa("Jhean", 21, 1.70, 35)
 print(Jhean.apresentar())
 Jhean = Termometro(86)
 print(Jhean.verificaTemperatura())
