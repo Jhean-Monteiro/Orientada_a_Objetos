@@ -10,9 +10,11 @@ class ContaCorrente extends ContaBase {
         try {
             if (this.saldo <= valor) {
                 throw new RangeError('CRASH.');
-            } else if (this.saldo > valor && valor == NaN)  {
-                this.saldo =- valor;
+            } else if (this.saldo > valor && valor != NaN)  {
+                this.saldo -= valor;
                 console.log(`${valor} sacado com sucesso. | Saldo Atual: ${this.saldo}`)
+            } else {
+                console.error("Tipo Inválido")
             }
 
         } catch (err) {
@@ -23,4 +25,4 @@ class ContaCorrente extends ContaBase {
 const user = new ContaCorrente(1000);
 
 console.log(user.saldo)
-user.sacar(2000)
+user.sacar(100)
